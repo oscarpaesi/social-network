@@ -10,10 +10,6 @@
     <md-card-content>
       {{ post.content }}
     </md-card-content>
-    <!-- <md-card-actions>
-      <md-button>Like</md-button>
-      <md-button>Share</md-button>
-    </md-card-actions> -->
   </md-card>
 </template>
 
