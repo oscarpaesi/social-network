@@ -2,7 +2,7 @@
   <md-card md-with-hover>
     <md-card-header>
       <md-avatar class="md-avatar-icon">
-        <md-icon>person</md-icon>
+        <img :src="post.author.pictureUrl" />
       </md-avatar>
       <div class="md-title"> {{ post.author.name }} </div>
       <div class="md-subhead"> {{ date }} </div>
