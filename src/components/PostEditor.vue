@@ -1,14 +1,14 @@
 <template>
-    <md-card md-with-hover>
-        <md-field>
-            <label for="post-content">What's on your mind?</label>
-            <md-textarea id="post-content" md-counter v-model="value"></md-textarea>
-        </md-field>
-        <md-card-actions>
-            <md-button>Cancel</md-button>
-            <md-button @click="addPost">Post</md-button>
-        </md-card-actions>
-    </md-card>
+  <md-card md-with-hover>
+    <md-field>
+      <label for="post-content">What's on your mind?</label>
+      <md-textarea id="post-content" md-counter v-model="value"></md-textarea>
+    </md-field>
+    <md-card-actions>
+      <md-button>Cancel</md-button>
+      <md-button @click="addPost">Post</md-button>
+    </md-card-actions>
+  </md-card>
 </template>
 
 <script>
