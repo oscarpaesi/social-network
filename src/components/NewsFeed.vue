@@ -1,9 +1,7 @@
 <template>
-  <div id="content-area">
-
-    <post-editor></post-editor>
-
-    <post v-for="post in posts" :key="post.id" :post="post"></post>
+  <div id="content-area" class="md-layout md-gutter md-alignment-top-space-around">
+    <post-editor class="md-layout-item"></post-editor>
+    <post class="md-layout-item" v-for="post in posts" :key="post.id" :post="post"></post>
   </div>
 </template>
 
@@ -39,6 +37,7 @@ export default {
 
 <style lang="scss" scoped>
   #content-area {
-    width: 900px
+    width: 900px;
+    justify-content: center;
   }
 </style>
