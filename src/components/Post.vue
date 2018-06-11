@@ -5,7 +5,7 @@
         <md-icon>person</md-icon>
       </md-avatar>
       <div class="md-title"> {{ post.author.name }} </div>
-      <div class="md-subhead"> {{ post.timestamp }} </div>
+      <div class="md-subhead"> {{ date }} </div>
     </md-card-header>
     <md-card-content>
       {{ post.content }}
@@ -19,6 +19,8 @@
 
 <script>
 
+import moment from 'moment'
+
 export default {
   name: 'Post',
   props: ['post'],
@@ -28,6 +30,14 @@ export default {
     },
     content () {
       return this.post.content
+    },
+    date () {
+      return this.formatDate(this.post.timestamp)
+    }
+  },
+  methods: {
+    formatDate (value) {
+      return moment(value).calendar()
     }
   }
 }
