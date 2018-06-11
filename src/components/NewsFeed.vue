@@ -5,7 +5,7 @@
       <h3 class="md-title" style="flex: 1">Social Network</h3>
       <md-button class="md-icon-button">
         <md-avatar class="md-avatar-icon">
-          <md-icon>person</md-icon>
+          <img :src="currentUser.pictureUrl" />
         </md-avatar>
       </md-button>
     </md-toolbar>
@@ -41,6 +41,9 @@ export default {
     },
     users () {
       return this.$store.getters.users.length
+    },
+    currentUser () {
+      return this.$store.getters.currentUser
     }
   }
 }
